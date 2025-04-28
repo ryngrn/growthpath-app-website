@@ -5,7 +5,7 @@ import { Markdown } from 'components/markdown';
 import { RandomQuote } from 'components/random-quote';
 import { getNetlifyContext } from 'utils';
 import Image from 'next/image';
-import { Footer } from '@/components/footer';
+import { Footer } from '../components/footer';
 
 const contextExplainer = `
 The card below is rendered on the server based on the value of \`process.env.CONTEXT\` 
