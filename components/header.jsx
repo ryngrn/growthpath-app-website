@@ -14,29 +14,22 @@ const navItems = [
 
 export function Header() {
     return (
-        <nav className="flex flex-wrap items-center gap-4 pt-6 pb-12 sm:pt-12 md:pb-24">
-            <Link href="/">
-                <Image src={netlifyLogo} alt="Netlify logo" />
-            </Link>
-            {!!navItems?.length && (
-                <ul className="flex flex-wrap gap-x-4 gap-y-1">
-                    {navItems.map((item, index) => (
-                        <li key={index}>
-                            <Link href={item.href} className="inline-flex px-1.5 py-1 sm:px-3 sm:py-2">
-                                {item.linkText}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            )}
-            <Link
-                href="https://github.com/netlify-templates/next-platform-starter"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden lg:inline-flex lg:ml-auto"
-            >
-                <Image src={githubLogo} alt="GitHub logo" className="w-7" />
-            </Link>
-        </nav>
+        <header className="fixed w-full bg-white/80 backdrop-blur-sm z-50">
+            <div className="container mx-auto px-4">
+                <div className="flex items-center justify-between h-16">
+                    <div className="flex items-center">
+                        <span className="text-xl font-bold text-gray-900">GrowthPath</span>
+                    </div>
+                    <nav className="hidden md:flex space-x-8">
+                        <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            Features
+                        </a>
+                        <a href="#download" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            Download
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </header>
     );
 }

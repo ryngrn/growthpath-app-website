@@ -4,6 +4,8 @@ import { ContextAlert } from 'components/context-alert';
 import { Markdown } from 'components/markdown';
 import { RandomQuote } from 'components/random-quote';
 import { getNetlifyContext } from 'utils';
+import Image from 'next/image';
+import { Footer } from '@/components/footer';
 
 const contextExplainer = `
 The card below is rendered on the server based on the value of \`process.env.CONTEXT\` 
@@ -23,28 +25,100 @@ And as always with dynamic content, beware of layout shifts & flicker! (here, we
 
 const ctx = getNetlifyContext();
 
-export default function Page() {
+export default function Home() {
     return (
-        <div className="flex flex-col gap-12 sm:gap-16">
-            <section>
-                <ContextAlert className="mb-6" />
-                <h1 className="mb-4">Netlify Platform Starter - Next.js</h1>
-                <p className="mb-6 text-lg">Get started with Next.js and Netlify in seconds.</p>
-                <Link href="https://docs.netlify.com/frameworks/next-js/overview/" className="btn btn-lg sm:min-w-64">
-                    Read the Docs
-                </Link>
+        <div className="flex flex-col min-h-screen">
+            {/* Hero Section */}
+            <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white">
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+                        <div className="flex-1">
+                            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                                Track Your Child's Learning Journey
+                            </h1>
+                            <p className="text-xl text-gray-600 mb-8">
+                                GrowthPath helps parents keep track of what their children have learned and monitor their progress.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a
+                                    href="#"
+                                    className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                                >
+                                    Download for iOS
+                                </a>
+                                <a
+                                    href="#"
+                                    className="bg-gray-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-colors"
+                                >
+                                    Download for Android
+                                </a>
+                            </div>
+                        </div>
+                        <div className="flex-1">
+                            <div className="relative w-full max-w-md mx-auto">
+                                <Image
+                                    src="/app-screenshot.png"
+                                    alt="GrowthPath App Screenshot"
+                                    width={500}
+                                    height={1000}
+                                    className="rounded-xl shadow-2xl"
+                                    priority
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
-            {!!ctx && (
-                <section className="flex flex-col gap-4">
-                    <Markdown content={contextExplainer} />
-                    <RuntimeContextCard />
-                </section>
-            )}
-            <section className="flex flex-col gap-4">
-                <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
-                <Markdown content={postDynamicContentExplainer} />
+
+            {/* Features Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-4xl font-bold text-center mb-16">Key Features</h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="p-6 rounded-lg bg-gray-50">
+                            <h3 className="text-xl font-semibold mb-4">Progress Tracking</h3>
+                            <p className="text-gray-600">
+                                Easily monitor your child's learning milestones and achievements over time.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-lg bg-gray-50">
+                            <h3 className="text-xl font-semibold mb-4">Learning Journal</h3>
+                            <p className="text-gray-600">
+                                Document and celebrate your child's learning moments with photos and notes.
+                            </p>
+                        </div>
+                        <div className="p-6 rounded-lg bg-gray-50">
+                            <h3 className="text-xl font-semibold mb-4">Goal Setting</h3>
+                            <p className="text-gray-600">
+                                Set and track learning goals to support your child's development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+            {/* CTA Section */}
+            <section className="py-20 bg-blue-50">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-4xl font-bold mb-8">Start Your Child's Learning Journey Today</h2>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a
+                            href="#"
+                            className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                        >
+                            Download for iOS
+                        </a>
+                        <a
+                            href="#"
+                            className="bg-gray-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-colors"
+                        >
+                            Download for Android
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <Footer />
         </div>
     );
 }
