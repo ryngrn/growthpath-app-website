@@ -1,25 +1,10 @@
-import localFont from 'next/font/local'
+import { Noto_Sans } from 'next/font/google'
 import './globals.css'
 
-const billySans = localFont({
-    src: [
-        {
-            path: '../public/fonts/BillySans-Regular.woff2',
-            weight: '400',
-            style: 'normal',
-        },
-        {
-            path: '../public/fonts/BillySans-Medium.woff2',
-            weight: '500',
-            style: 'normal',
-        },
-        {
-            path: '../public/fonts/BillySans-Bold.woff2',
-            weight: '700',
-            style: 'normal',
-        },
-    ],
-    variable: '--font-billy-sans',
+const notoSans = Noto_Sans({
+    subsets: ['latin'],
+    weight: ['400', '500', '700'],
+    variable: '--font-noto-sans',
 })
 
 export const metadata = {
@@ -29,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={`${billySans.variable}`}>
+        <html lang="en" className={`${notoSans.variable}`}>
             <head>
                 <link rel="icon" href="/favicon.svg" sizes="any" />
             </head>
