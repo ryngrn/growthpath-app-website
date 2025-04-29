@@ -43,7 +43,7 @@ export default function Home() {
                                     priority
                                 />
                             </div>
-                            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-roca">
+                            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-roca mt-24">
                                 Track Your Child&apos;s Learning Journey
                             </h2>
                             <p className="text-xl text-gray-600 mb-8">
