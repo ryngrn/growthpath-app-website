@@ -56,24 +56,40 @@ export default async function Page() {
 }
 
 async function RandomWikiArticle() {
-    const randomWiki = await fetch(randomWikiUrl, {
-        next: { revalidate: revalidateTTL, tags: [tagName] }
-    });
+    try {
+        const randomWiki = await fetch(randomWikiUrl, {
+            next: { revalidate: revalidateTTL, tags: [tagName] }
+        });
 
-    const content = await randomWiki.json();
-    let extract = content.extract;
-    if (extract.length > maxExtractLength) {
-        extract = extract.slice(0, extract.slice(0, maxExtractLength).lastIndexOf(' ')) + ' [...]';
+        if (!randomWiki.ok) {
+            throw new Error('Failed to fetch Wikipedia article');
+        }
+
+        const content = await randomWiki.json();
+        let extract = content.extract;
+        if (extract.length > maxExtractLength) {
+            extract = extract.slice(0, extract.slice(0, maxExtractLength).lastIndexOf(' ')) + ' [...]';
+        }
+
+        return (
+            <Card className="max-w-2xl">
+                <h3 className="text-2xl text-neutral-900">{content.title}</h3>
+                <div className="text-lg font-bold">{content.description}</div>
+                <p className="italic">{extract}</p>
+                <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>
+                    From Wikipedia
+                </a>
+            </Card>
+        );
+    } catch (error) {
+        // Return a fallback UI during build time or when fetch fails
+        return (
+            <Card className="max-w-2xl">
+                <h3 className="text-2xl text-neutral-900">Random Wikipedia Article</h3>
+                <p className="text-neutral-600">
+                    A random Wikipedia article will be displayed here when the page is loaded in the browser.
+                </p>
+            </Card>
+        );
     }
-
-    return (
-        <Card className="max-w-2xl">
-            <h3 className="text-2xl text-neutral-900">{content.title}</h3>
-            <div className="text-lg font-bold">{content.description}</div>
-            <p className="italic">{extract}</p>
-            <a target="_blank" rel="noopener noreferrer" href={content.content_urls.desktop.page}>
-                From Wikipedia
-            </a>
-        </Card>
-    );
 }
