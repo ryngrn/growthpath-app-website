@@ -71,7 +71,7 @@ export default function Home() {
                                     alt="GrowthPath App Screenshot"
                                     width={500}
                                     height={1000}
-                                    className="rounded-xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]"
+                                    className="rounded-xl"
                                     priority
                                 />
                             </div>
