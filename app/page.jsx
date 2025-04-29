@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="flex-1">
-                            <div className="mb-8 -mt-32">
+                            <div className="mb-8 -mt-48">
                                 <Image
                                     src="/images/logo-min.svg"
                                     alt="GrowthPath"
