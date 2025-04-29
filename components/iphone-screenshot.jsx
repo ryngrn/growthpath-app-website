@@ -4,8 +4,13 @@ export function IPhoneScreenshot({ className = '' }) {
     return (
         <div className={`relative w-[390px] h-[844px] mx-auto ${className}`}>
             {/* iPhone Frame */}
-            <div className="absolute inset-0 bg-gray-900 rounded-[60px] p-4 shadow-2xl">
-                {/* Notch */}
+            <div className="absolute inset-0 bg-gray-900 rounded-[60px] p-4 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]">
+                {/* Side Buttons */}
+                <div className="absolute left-0 top-[100px] w-[4px] h-[60px] bg-gray-800 rounded-l-sm" />
+                <div className="absolute right-0 top-[100px] w-[4px] h-[60px] bg-gray-800 rounded-r-sm" />
+                <div className="absolute right-0 top-[180px] w-[4px] h-[60px] bg-gray-800 rounded-r-sm" />
+                
+                {/* Notch/Dynamic Island */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[35px] bg-gray-900 rounded-b-[20px] z-10" />
                 
                 {/* Screen Content */}
