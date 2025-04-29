@@ -29,7 +29,7 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white">
+            <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white pb-0">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="flex-1">
@@ -65,7 +65,7 @@ export default function Home() {
                             </div>
                         </div>
                         <div className="flex-1">
-                            <div className="relative w-full max-w-md mx-auto">
+                            <div className="relative w-full max-w-md mx-auto mb-0">
                                 <Image
                                     src="/images/iphone-image.png"
                                     alt="GrowthPath App Screenshot"
