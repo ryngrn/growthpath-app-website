@@ -1,27 +1,6 @@
 import './globals.css';
 import localFont from 'next/font/local';
 
-const billySans = localFont({
-  src: [
-    {
-      path: '../public/fonts/BillySans-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/BillySans-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/BillySans-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-billy-sans',
-});
-
 const roca = localFont({
   src: [
     {
@@ -66,7 +45,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${billySans.variable} ${roca.variable}`}>
+    <html lang="en" className={`${roca.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
