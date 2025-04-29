@@ -4,7 +4,7 @@ import { ContextAlert } from 'components/context-alert';
 import { Markdown } from 'components/markdown';
 import { RandomQuote } from 'components/random-quote';
 import { getNetlifyContext } from 'utils';
-import { IPhoneScreenshot } from 'components/iphone-screenshot';
+import Image from 'next/image';
 import { Footer } from '../components/footer';
 
 const contextExplainer = `
@@ -59,7 +59,14 @@ export default function Home() {
                         </div>
                         <div className="flex-1">
                             <div className="relative w-full max-w-md mx-auto">
-                                <IPhoneScreenshot className="scale-90" />
+                                <Image
+                                    src="/images/iphone-image.png"
+                                    alt="GrowthPath App Screenshot"
+                                    width={500}
+                                    height={1000}
+                                    className="rounded-xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]"
+                                    priority
+                                />
                             </div>
                         </div>
                     </div>
