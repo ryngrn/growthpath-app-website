@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="flex-1">
-                            <div className="mb-8">
+                            <div className="mb-8 -mt-32">
                                 <Image
                                     src="/images/logo-min.svg"
                                     alt="GrowthPath"
@@ -43,7 +43,7 @@ export default function Home() {
                                     priority
                                 />
                             </div>
-                            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-roca">
                                 Track Your Child&apos;s Learning Journey
                             </h2>
                             <p className="text-xl text-gray-600 mb-8">
@@ -79,7 +79,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* Section Transition */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white shadow-[0_-20px_25px_-5px_rgba(0,0,0,0.1)]" />
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white shadow-[0_30px_35px_-5px_rgba(0,0,0,0.15)]" />
             </section>
 
             {/* Features Section */}
