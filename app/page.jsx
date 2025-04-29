@@ -78,6 +78,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                {/* Section Transition */}
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white shadow-[0_-20px_25px_-5px_rgba(0,0,0,0.1)]" />
             </section>
 
             {/* Features Section */}
