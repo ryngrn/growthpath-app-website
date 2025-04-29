@@ -35,7 +35,7 @@ export default function Home() {
                         <div className="flex-1">
                             <div className="mb-8">
                                 <Image
-                                    src="/images/logo.svg"
+                                    src="/images/logo-min.svg"
                                     alt="GrowthPath"
                                     width={200}
                                     height={50}

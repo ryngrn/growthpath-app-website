@@ -8,7 +8,7 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0">
                         <Image
-                            src="/images/logo.svg"
+                            src="/images/logo-min.svg"
                             alt="GrowthPath"
                             width={200}
                             height={50}
