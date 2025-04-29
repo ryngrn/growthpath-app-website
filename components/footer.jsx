@@ -7,7 +7,7 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0">
                         <h2 className="text-2xl font-bold">GrowthPath</h2>
-                        <p className="text-gray-400 mt-2">Track your child's learning journey</p>
+                        <p className="text-gray-400 mt-2">Track your child&apos;s learning journey</p>
                     </div>
                     <div className="flex flex-col items-center md:items-end">
                         <div className="flex space-x-4 mb-4">

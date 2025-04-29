@@ -34,7 +34,7 @@ export default function Home() {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                         <div className="flex-1">
                             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                                Track Your Child's Learning Journey
+                                Track Your Child&apos;s Learning Journey
                             </h1>
                             <p className="text-xl text-gray-600 mb-8">
                                 GrowthPath helps parents keep track of what their children have learned and monitor their progress.
@@ -78,19 +78,19 @@ export default function Home() {
                         <div className="p-6 rounded-lg bg-gray-50">
                             <h3 className="text-xl font-semibold mb-4">Progress Tracking</h3>
                             <p className="text-gray-600">
-                                Easily monitor your child's learning milestones and achievements over time.
+                                Easily monitor your child&apos;s learning milestones and achievements over time.
                             </p>
                         </div>
                         <div className="p-6 rounded-lg bg-gray-50">
                             <h3 className="text-xl font-semibold mb-4">Learning Journal</h3>
                             <p className="text-gray-600">
-                                Document and celebrate your child's learning moments with photos and notes.
+                                Document and celebrate your child&apos;s learning moments with photos and notes.
                             </p>
                         </div>
                         <div className="p-6 rounded-lg bg-gray-50">
                             <h3 className="text-xl font-semibold mb-4">Goal Setting</h3>
                             <p className="text-gray-600">
-                                Set and track learning goals to support your child's development.
+                                Set and track learning goals to support your child&apos;s development.
                             </p>
                         </div>
                     </div>
@@ -100,7 +100,7 @@ export default function Home() {
             {/* CTA Section */}
             <section className="py-20 bg-blue-50">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-4xl font-bold mb-8">Start Your Child's Learning Journey Today</h2>
+                    <h2 className="text-4xl font-bold mb-8">Start Your Child&apos;s Learning Journey Today</h2>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
                             href="#"
