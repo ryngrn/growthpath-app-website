@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Footer() {
     return (
@@ -6,7 +7,13 @@ export function Footer() {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0">
-                        <h2 className="text-2xl font-bold">GrowthPath</h2>
+                        <Image
+                            src="/images/logo.svg"
+                            alt="GrowthPath"
+                            width={200}
+                            height={50}
+                            className="h-8 w-auto"
+                        />
                         <p className="text-gray-400 mt-2">Track your child&apos;s learning journey</p>
                     </div>
                     <div className="flex flex-col items-center md:items-end">
