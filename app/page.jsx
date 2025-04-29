@@ -35,7 +35,6 @@ export default function Home() {
                         <div className="flex-1">
                             <div className="mb-8">
                                 <h1 className="text-4xl font-bold text-blue-600">GrowthPath</h1>
-                                <p className="text-gray-500 mt-2">Track your child&apos;s progress</p>
                             </div>
                             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
                                 Track Your Child&apos;s Learning Journey
