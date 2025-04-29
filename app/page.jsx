@@ -69,8 +69,8 @@ export default function Home() {
                                 <Image
                                     src="/images/iphone-image.png"
                                     alt="GrowthPath App Screenshot"
-                                    width={500}
-                                    height={1000}
+                                    width={600}
+                                    height={1200}
                                     className="rounded-xl"
                                     priority
                                 />
